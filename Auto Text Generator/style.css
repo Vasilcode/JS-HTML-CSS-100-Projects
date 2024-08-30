@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: lightblue;
+    color: black;
+}
+
+p{
+    font-size: 3rem;
+}
+
+.vt{
+    font-weight: bold;
+    color: greenyellow;
+}
+
+.typed-text{
+    font-weight: bold;
+    color: red;
+}
+
+.cursor{
+    background: lightcyan;
+    position: absolute;
+    animation: blink 0.9s step-start infinite;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
