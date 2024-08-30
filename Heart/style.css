@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: red; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.gray-heart{
+    background: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    transition: 0.3 ease;
+}
+
+.gray-heart:before,
+.gray-heart:after{
+    content: "";
+    background: lightgray;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.gray-heart:before{
+    top: -60px;
+    left: 0;
+}
+
+.gray-heart:after{
+    left: 60px;
+    top: 0;
+}
+
+/* red heart */
+.red-heart{
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    transform: rotate(-45deg);
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.red-heart:before,
+.red-heart:after{
+    content: "";
+    background: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+}
+
+.red-heart:before{
+    top: -60px;
+    left: 0px;
+}
+.red-heart:after{
+    left: 60px;
+    top: 0px;
+}
+
+.red-heart.animation{
+    animation: pop 1s linear;
+    visibility: visible;
+}
+
+.red.heart.fill-color{
+    background: var(--main-color);
+}
+
+@keyframes pop{
+    100%{
+        transform: scale(1.7) rotate(-45deg);
+        opacity: 0;
+    }
+}
