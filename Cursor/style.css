@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+.playfair-display-sc-black-italic {
+    font-family: "Playfair Display SC", serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+  body{
+    height: 100vh;
+    background: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Playfair Display SC", serif;
+  }
+
+  .container{
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  h1{
+    color: whitesmoke;
+    font-family: bold;
+    font-size: 4rem;
+  }
+
+  p{
+    color: whitesmoke;
+    max-width: 700px;
+    letter-spacing: 2px;
+    line-height: 22px;
+    margin-bottom: 40px;
+  }
+
+  button{
+    padding: 10px 20px;
+    margin: 0;
+    background: transparent;
+    color: whitesmoke;
+    border: 2px solid white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /*JavaScript*/
+   div.cursor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: blue;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
