@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: blue;
+    --secondary-color: white;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: auto;
+    background: linear-gradient(#8BC6EC, #9599E2);
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 90%;
+    width: 350px;
+}
+
+.progress-container:before{
+    content: "";
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress{
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.circle{
+    background-color: white;
+    color: #999;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--secondary-color);
+    transition: 0.5s ease;
+    font-weight: bold;
+}
+
+.circle.active{
+    border-color: var(--primary-color);
+}
+
+.btn{
+    background-color: transparent;
+    padding: 10px 30px;
+    margin: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2),
+    -1px -5px 10px whitesmoke;
+    border-color: transparent;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4), -1px -5px 10px whitesmoke;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:disabled{
+    background-color: var(--secondary-color);
+    cursor: not-allowed;
+}
