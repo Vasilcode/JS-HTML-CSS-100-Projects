@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: gainsboro;
+}
+
+header{
+    margin-top: 3em;
+    text-align: center;
+    color: black;
+}
+
+header h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+#container3D canvas{
+    position: absolute;
+    width: 100vw !important;
+    height: 100vh !important;
+    top: 10px;
+}
