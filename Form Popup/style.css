@@ -1,0 +1,119 @@
+:root {
+    --modal-durations: 1s;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+header {
+    background-image: url(https://i.pinimg.com/originals/29/cd/c9/29cdc910d33fcdd84237c121b2149f62.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-container h1{
+    font-size: 4rem;
+    color: white;
+}
+
+.content-container p{
+    width: 600px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    line-height: 30px;
+}
+
+.cta-btn{
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.3s ease;
+    color: white;
+}
+
+.modal-container {
+    background-color: rgba(0,0,0,0.5);
+    display: none;  
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal{
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    width: 400px;
+}
+
+.modal-content{
+    padding: 20px;
+}
+
+.modal-form  div{
+    margin: 20px 0;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.modal-form .form-input{
+    padding: 8px;
+    width: 100%;
+}
+
+.close-btn{
+    background: transparent;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.modal-container .submit-btn{
+    padding: 10px 30px;
+    font-weight: bold;
+    border: none;
+    background: transparent;
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.6);
+    color: black;
+    cursor: pointer;
+}
+
+/*JavaScript class*/
+.modal-container .show-modal{ 
+    display: block;
+}
