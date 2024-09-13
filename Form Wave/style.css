@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: black !important;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    background: white;
+    padding: 5rem;
+    border-radius: 10px;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.special {
+    background: red;
+    padding: 5px 20px;
+    color: white;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input{
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    display: block !important;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    transition: border-color 0.3s;
+}
+
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: red;
+}
+
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: red;
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn-active{
+    transform: scale(0.98);
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+/*JavaScript*/
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+   color: red;
+   transform: translateY(-30px); 
+}
+
+
+
